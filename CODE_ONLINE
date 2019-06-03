@@ -1,0 +1,286 @@
+#!/usr/bin/python
+
+#Example of FreeCode Camp
+phrase = "Giraffe Academy"
+print(phrase);
+print(phrase[0]);
+print(phrase.index('Aca'));
+print(phrase.replace("Giraffe","Elephant"))
+
+#Work with numbers
+print(2)
+print(3*4)
+print(10%3)
+
+my_num = 5;
+print(my_num)
+print(my_num + "is my favorite number")
+
+print(max(4,6))
+print(min(4,6))
+print(round(3.7))
+
+#Ask a prompt
+name = input("Enter your name:")
+print("Hello" + name + "!")
+
+#Build a basic caculator
+num1 = input("Enter a number:")
+num2 = input("Enter another number:")
+result = int(num1) + int(num2) #int means integer
+result1 = float(num1) + float(num2) #Float means number with decimal
+
+#madlib in python
+color = input("Enter a color:")
+plural_noun = input("Enter a plural noun:")
+celebrity = input("Enter a celebrity:")
+
+#Lists
+friends = ["Kevin", "Karen", "Jim"]
+print(friends)
+
+#Index of a list
+print(friends[0])
+print(friends[1:])
+
+#List functions
+
+#Extend function
+lucky_numbers = [4,8,10]
+friends = ["Kevin","Karen","Jim","Oscar","Toby"]
+friends.extend(lucky_numbers)
+friends.remove("Jim")
+print(friends)
+friends.clear()
+
+friends.pop()
+
+friends2 = friends.copy()
+
+#Tuples（数组）
+coordinates = (4,5)
+print(coordinates[0])
+
+coordinates = [(4,5),(6,7),(80,34)]
+
+#Functions
+def say_hi():
+	print("Hello" + name + "you are" + age)
+	
+print("Top")
+say_hi()
+print("Bottom")
+
+#Return Statement
+def cube(num):
+	return num*num*num
+	
+	print(cube(3))
+	
+#If statement
+is_male = True
+is_Tall = True 
+
+if is_male or is_Tall:
+	print("You are a male or tall or both")
+elif is_male and not(is_Tall):
+	print("You are a male but you are not tall")
+elif not(is_male) and is_Tall:
+	print("You are not a male but you are tall")
+else:
+	print("You are not a male")
+	
+#If statement and comparision
+def max_num(num1,num2.num3)
+	if num1 >= num2 and num1 >= num3:
+		return num1
+	elif num2 >= num1 and num2 >= num3
+		return num2
+	else:
+		return num3
+		
+#Build a better calculator
+num1 = float(input("Enter first number:"))
+op = input("Enter operator:")
+num2 = float(input("Enter second number:"))
+
+if op == "+":
+	print(num1 + num2)
+elif op == "-":
+	print(num2 - num1)
+elif op == "*":
+	print(num1 * num2)
+elif op == "/"
+	print(num1 / num2)
+else:
+	print("Invalid operator")
+	
+#Dictionaries
+monthConversions = {
+	"Jan": "January",
+	"Feb": "Feburary",
+	"Mar": "March",
+	"Apr": "April",
+	"May": "May",
+	"Jun": "June",
+	"Jul": "July",
+	"Aug": "August",
+	"Sep": "September",
+	"Oct": "October",
+	"Nov": "November",
+	"Dec": "December",
+}
+
+print(monthConversions.get("Luv","Not a vaild key"))
+
+#While Loop
+i = 1
+while i <= 10:
+	print(i)
+	i += 1
+	
+print("Done with the loop.")
+
+#Build a guess game
+secret_word = "giraffe"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word
+	if guess_count < guess_limit
+		guess = input("Enter guess: ")
+		guess_count += 1
+	else:
+		out_of_guesses =  True
+		
+if out_of_guesses:
+	print("Out of guesses, You Lose!")
+else:
+	print("")
+	
+print("You win !")
+
+#For Loop
+for letter in "Giraffe Academy"
+	print(letter)
+friends = ["Jim","Karen","Kevin"]
+for index in friends #index function
+	print(index)
+	
+for index in range(len(friends)):
+	print(friends[index])
+	
+for index in range(5):
+	if index == 0:
+		print("first iteration")
+	else:
+		print("Not first")
+		
+#Exponent function
+def raise_to_power(base_num, pow_num):
+	result = 1
+	for index in range(pow_num):
+		result = result * base_num
+	return result
+	
+#2D Lists and Nested Loops
+number_grid = [
+	[1,2,3]
+	[4,5,6]
+	[7,8,9]
+	[0]
+]
+
+print(number_grid[0][0]) #The result should be 1
+
+for row in number_grid:
+	for col in row:
+		print(col)
+		
+#Build a translator
+def translate(phrase):
+	translation = ""
+	for letter in phrase:
+		if letter in "AEIOUaeiou":
+			translation = translation + "g"
+		else:
+			translation = translation + letter
+	return translation
+	
+#Comments
+
+
+#Try except
+try: 
+	number = int(input("Enter a number: "))
+	print(number)
+except:
+	print("Invalid input")
+	
+#Read files
+employee_file = open("employees.txt","r") #Set this txt file as readable
+
+#Writing to files
+
+#Modules and pip
+
+#Classes and objects
+class Student:
+	def def __init__(self,name,major,gpa, is on probation):
+		self.name = name
+		self.major = major
+		self.gpa = gpa
+		self.is_on_probation = is_on_probation
+		
+from Student import Student
+
+student1 = Student("Jim","Business",3.1,False)
+
+print(student1.gpa)
+
+#Build a multiple choice quiz
+question_prompts = [
+	"What color are apples? \n (a) Red/Green \n (b) Purple \n (c) Orange\n\n ",
+	"What color are bananas? \n (a) Yellow/Green \n (b) Purple \n (c) Orange\n\n"
+	"What color are stawberries? \n (a) Red \n (b) Purple \n (c) Orange\n\n"
+]
+
+def run_test(questions):
+	score = 0
+	for question in questions:
+		answer = input(question.prompt)
+		if answer == question.answer:
+			score += 1
+			print("You got + str(score)")
+			
+#Object functions
+def def __init__(self,name,major,gpa, is on probation):
+		self.name = name
+		self.major = major
+		self.gpa = gpa
+		self.is_on_probation = is_on_probation
+		
+def on_honor_roll(self):
+	if self.gpa >= 3.5;
+		return True
+	else:
+		return False
+		
+#Inheritance
+from Chef import Chef
+
+myChef = Chef()
+myChef.make_Chicken() #Notice: this require another file 
+#The another file is like this
+#class Chef:
+#	def make_chicken(self):
+#		print("The chef made a chicken")
+#	def make_salad(self):
+#		print("The chef made a salad")
+#	def make_special_dish(self):
+#			print("The chef made bbq ribs")
+			
+#Python Interpretor
+  
